@@ -58,13 +58,16 @@ script = ExtResource("1_h2yge")
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=647325630]
 
 [node name="Icon" type="Sprite2D" parent="Player" unique_id=2039709493]
-position = Vector2(575, 431.74997)
+position = Vector2(223, 125.00006)
 scale = Vector2(0.47656235, 0.76171863)
 texture = ExtResource("2_1bvp3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=753703078]
-position = Vector2(575, 431.5)
+position = Vector2(223, 125)
 shape = SubResource("RectangleShape2D_a0pwd")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1232686040]
+position = Vector2(227, 129)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1062398783]
 scale = Vector2(2, 2)
