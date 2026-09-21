@@ -28,12 +28,13 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-	light_amount -= DRAIN_RATE * delta
-	light.texture_scale = max(light_amount, 0.0)
+	#light_amount -= DRAIN_RATE * delta
+	light.texture_scale -= DRAIN_RATE * delta
+	#light.texture_scale = max(light_amount, 0.0)
 	
-	if light_amount <= 0.0:
+	if light.texture_scale <= 0.0 or position.y > 2000:
 		get_tree().reload_current_scene()
 
-func add_light(amount: float) -> void:
-	light_amount = min(light_amount + amount, MAX_LIGHT)
+#func add_light(amount: float) -> void:
+	#light_amount = min(light_amount + amount, MAX_LIGHT)
 	
