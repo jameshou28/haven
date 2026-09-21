@@ -11,6 +11,7 @@ const MAX_FALL_SPEED = 700.0
 @onready var light: PointLight2D = $PointLight2D
 @onready var win_label: Label = $"../CanvasLayer/WinLabel"
 @onready var tiles: TileMapLayer = $"../TileMapLayer"
+@onready var game_over_label: Label = $"../CanvasLayer/GameOverLabel"
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -36,14 +37,23 @@ func _physics_process(delta: float) -> void:
 	light.texture_scale -= DRAIN_RATE * delta
 	#light.texture_scale = max(light_amount, 0.0)
 	
-	if light.texture_scale <= 0.0 or position.y > 2000:
+	if position.y > 2000:
 		get_tree().reload_current_scene()
+
+	if light.texture_scale <= 0.0:
+		game_over()
 		
 	var cell := tiles.local_to_map(tiles.to_local(global_position))
 	print(cell)
 	if cell.y >= 19:
 		win_label.visible = true
 		set_physics_process(false)
+		
+func game_over() -> void:
+	game_over_label.visible = true
+	set_physics_process(false)
+	await get_tree().create_timer(2.0).timeout
+	get_tree().reload_current_scene()
 
 #func add_light(amount: float) -> void:
 	#light_amount = min(light_amount + amount, MAX_LIGHT)

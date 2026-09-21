@@ -109,3 +109,19 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 48
 text = "You win!"
 horizontal_alignment = 1
+
+[node name="GameOverLabel" type="Label" parent="CanvasLayer" unique_id=498547858]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -193.5
+offset_top = -88.0
+offset_right = 193.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 48
+text = "Game Over!"
+horizontal_alignment = 1
