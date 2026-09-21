@@ -89,4 +89,5 @@ tile_map_data = PackedByteArray("AAAAABEAAAABAAEAAAABABEAAAABAAEAAAACABEAAAABAAE
 tile_set = SubResource("TileSet_a0pwd")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1227248567]
+visible = false
 color = Color(0.039215688, 0.039215688, 0.078431375, 1)
