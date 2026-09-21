@@ -54,3 +54,4 @@ jump={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0.039215688, 0.039215688, 0.078431375, 1)
