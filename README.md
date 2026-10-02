@@ -12,3 +12,6 @@ Goal: Find the end before the light around your character goes out.
 | Left | A, Left Arrow |
 | Right | D, Right Arrow | 
 | Jump | W, Up Arrow|
+
+---
+Link: https://jameshou28.itch.io/haven
